@@ -15,3 +15,11 @@
   roles:
 
     - { role: laptop, tags: laptop }
+
+- name: Configure Printer
+  hosts: 'printer'
+  sudo: True
+
+  roles:
+
+    - { role: printer, tags: printer }

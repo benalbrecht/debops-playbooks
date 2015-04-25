@@ -33,3 +33,12 @@
   roles:
     - { role: debops.nfs, tags: nfs }
 
+
+- name: Configure ZFS filesystems and settings
+  hosts: 'zfs'
+  sudo: True
+
+  roles:
+
+    - { role: zfs, tags: zfs }
+

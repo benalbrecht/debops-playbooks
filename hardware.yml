@@ -7,3 +7,11 @@
   roles:
 
     - { role: debops.hwraid, tags: hwraid }
+
+- name: Configure Laptop utilities
+  hosts: 'laptop'
+  sudo: True
+
+  roles:
+
+    - { role: laptop, tags: laptop }

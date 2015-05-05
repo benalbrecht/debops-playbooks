@@ -27,6 +27,17 @@ v0.2.6
 
 - Add ``debops.tgt`` role. [drybjed]
 
+- During ``root.yml`` playbook, grab only the last line of ``dmidecode`` output
+  in case that it decides to emit comments about not supporting older releases
+  in ``STDOUT``. [drybjed]
+
+- Update of the ``bootstrap.yml`` playbook; there are now more variables that
+  define the administrator account, admin account will be now a "system"
+  account by default (UID < 1000). Playbook checks if an account with a given
+  name already exists and does not change its parameters if it does. Admin
+  account will be in more groups by default (``admins`` (passwordless sudo
+  access), ``staff`` and ``adm``). [drybjed]
+
 v0.2.5
 ------
 

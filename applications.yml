@@ -80,6 +80,14 @@
     - { role: debops.phpipam, tags: phpipam }
 
 
+- name: Manage RStudio Server
+  hosts: 'debops_rstudio_server'
+  sudo: True
+
+  roles:
+    - { role: debops.rstudio_server, tags: rstudio_server }
+
+
 - name: Manage GitLab service
   hosts: 'debops_gitlab'
   sudo: True
@@ -100,14 +108,6 @@
 
   roles:
     - { role: debops.gitlab_ci_runner, tags: gitlab_ci_runner }
-
-
-- name: Manage Ansible service
-  hosts: 'debops_ansible'
-  sudo: True
-
-  roles:
-    - { role: debops.ansible, tags: ansible }
 
 
 - name: Install DebOps recursively

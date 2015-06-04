@@ -1,4 +1,3 @@
-debops.ansible
 debops.apt
 debops.apt_preferences
 debops.auth
@@ -6,14 +5,12 @@ debops.backporter
 debops.boxbackup
 debops.console
 debops.debops
-debops.debug
 debops.dhcpd
 debops.directories
 debops.dnsmasq
 debops.dokuwiki
 debops.dovecot
 debops.elasticsearch
-debops.encfs
 debops.etc_services
 debops.etherpad
 debops.fail2ban
@@ -51,9 +48,9 @@ debops.rails_deploy
 debops.redis
 debops.reprepro
 debops.rsnapshot
+debops.rstudio_server
 debops.rsyslog
 debops.ruby
-debops.safekeep
 debops.salt
 debops.samba
 debops.secret
@@ -68,4 +65,5 @@ debops.subnetwork
 debops.tcpwrappers
 debops.tftpd
 debops.tgt
+debops.tinc
 debops.users

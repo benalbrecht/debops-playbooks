@@ -116,10 +116,3 @@
 
   roles:
     - { role: debops.debops, tags: debops }
-
-- name: Install Desktop system
-  hosts: 'desktop'
-  sudo: True
-
-  roles:
-    - { role: desktop, tags: desktop }

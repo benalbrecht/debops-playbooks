@@ -7,19 +7,3 @@
   roles:
 
     - { role: debops.hwraid, tags: hwraid }
-
-- name: Configure Laptop utilities
-  hosts: 'laptop'
-  sudo: True
-
-  roles:
-
-    - { role: laptop, tags: laptop }
-
-- name: Configure Printer
-  hosts: 'printer'
-  sudo: True
-
-  roles:
-
-    - { role: printer, tags: printer }

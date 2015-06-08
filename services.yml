@@ -122,4 +122,3 @@
 
   roles:
     - { role: debops.fail2ban, tags: fail2ban }
-

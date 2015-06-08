@@ -116,3 +116,10 @@
 
   roles:
     - { role: debops.debops, tags: debops }
+
+- name: Manage Stash service
+  hosts: 'stash'
+  sudo: True
+
+  roles:
+    - { role: stash, tags: stash }

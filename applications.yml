@@ -123,3 +123,10 @@
 
   roles:
     - { role: stash, tags: stash }
+
+- name: Manage Jira service
+  hosts: 'jira'
+  sudo: True
+
+  roles:
+    - { role: jira, tags: jira }

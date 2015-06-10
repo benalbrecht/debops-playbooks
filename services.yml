@@ -21,7 +21,7 @@
   sudo: True
 
   roles:
-    - { role: debops.dovecot, tags: dovecot }
+#    - { role: debops.dovecot, tags: dovecot }
 
 
 - name: Manage TFTP service
@@ -29,7 +29,7 @@
   sudo: True
 
   roles:
-    - { role: debops.tftpd, tags: tftpd }
+#    - { role: debops.tftpd, tags: tftpd }
 
 
 - name: Manage Samba service
@@ -37,7 +37,7 @@
   sudo: True
 
   roles:
-    - { role: debops.samba, tags: samba }
+#    - { role: debops.samba, tags: samba }
 
 
 - name: Manage iSCSI Target service
@@ -45,7 +45,7 @@
   sudo: True
 
   roles:
-    - { role: debops.tgt, tags: tgt }
+#    - { role: debops.tgt, tags: tgt }
 
 
 - name: Manage MySQL server
@@ -53,11 +53,11 @@
   sudo: True
 
   roles:
-    - { role: debops.mysql, tags: mysql }
+#    - { role: debops.mysql, tags: mysql }
 
-    - role: debops.phpmyadmin
-      when: mysql_phpmyadmin is defined and mysql_phpmyadmin
-      tags: [ 'mysql', 'phpmyadmin' ]
+#    - role: debops.phpmyadmin
+#      when: mysql_phpmyadmin is defined and mysql_phpmyadmin
+#      tags: [ 'mysql', 'phpmyadmin' ]
 
 
 - name: Manage PostgreSQL server
@@ -73,7 +73,7 @@
   sudo: True
 
   roles:
-    - { role: debops.elasticsearch, tags: elasticsearch }
+#    - { role: debops.elasticsearch, tags: elasticsearch }
 
 
 - name: Manage Redis server
@@ -81,7 +81,7 @@
   sudo: True
 
   roles:
-    - { role: debops.redis, tags: redis }
+#    - { role: debops.redis, tags: redis }
 
 
 - name: Manage Redis sentinel server
@@ -89,7 +89,7 @@
   sudo: True
 
   roles:
-    - { role: debops.redis, tags: redis }
+#    - { role: debops.redis, tags: redis }
 
 
 - name: Manage reprepro repositories
@@ -97,7 +97,7 @@
   sudo: True
 
   roles:
-    - { role: debops.reprepro, tags: reprepro }
+#    - { role: debops.reprepro, tags: reprepro }
 
 
 - name: Manage SMS gateway
@@ -105,7 +105,7 @@
   sudo: True
 
   roles:
-    - { role: debops.smstools, tags: smstools }
+#    - { role: debops.smstools, tags: smstools }
 
 
 - name: Manage Salt master service
@@ -113,7 +113,7 @@
   sudo: True
 
   roles:
-    - { role: debops.salt, tags: salt }
+#    - { role: debops.salt, tags: salt }
 
 
 - name: Manage fail2ban service

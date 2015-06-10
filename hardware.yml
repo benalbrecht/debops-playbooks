@@ -6,4 +6,4 @@
 
   roles:
 
-    - { role: debops.hwraid, tags: hwraid }
+#    - { role: debops.hwraid, tags: hwraid }

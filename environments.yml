@@ -5,7 +5,7 @@
   sudo: True
 
   roles:
-    - { role: debops.nodejs, tags: nodejs }
+#    - { role: debops.nodejs, tags: nodejs }
 
 
 - name: Manage Ruby environment
@@ -13,7 +13,7 @@
   sudo: True
 
   roles:
-    - { role: debops.ruby, tags: ruby }
+#    - { role: debops.ruby, tags: ruby }
 
 
 - name: Manage Go environment
@@ -21,7 +21,7 @@
   sudo: True
 
   roles:
-    - { role: debops.golang, tags: golang }
+#    - { role: debops.golang, tags: golang }
 
 
 - name: Manage Java environment
@@ -37,5 +37,5 @@
   sudo: True
 
   roles:
-    - { role: debops.php5, tags: php5 }
+#    - { role: debops.php5, tags: php5 }
 

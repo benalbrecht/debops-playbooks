@@ -13,7 +13,7 @@
   sudo: True
 
   roles:
-    - { role: debops.radvd, tags: radvd }
+#    - { role: debops.radvd, tags: radvd }
 
 
 - name: Manage ISC DHCP server
@@ -21,7 +21,7 @@
   sudo: True
 
   roles:
-    - { role: debops.dhcpd, tags: dhcpd }
+#    - { role: debops.dhcpd, tags: dhcpd }
 
 
 - name: Configure dnsmasq
@@ -37,7 +37,7 @@
   sudo: True
 
   roles:
-    - { role: debops.tinc, tags: tinc }
+#    - { role: debops.tinc, tags: tinc }
 
 
 - name: Configure stunnel

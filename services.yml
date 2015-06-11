@@ -8,6 +8,14 @@
     - { role: debops.nginx, tags: nginx }
 
 
+- name: Manage SNMP service
+  hosts: 'debops_snmpd'
+  sudo: True
+
+  roles:
+    - { role: debops.snmpd, tags: snmpd }
+
+
 - name: Manage Monit service
   hosts: 'debops_monit'
   sudo: True
@@ -74,6 +82,14 @@
 
   roles:
 #    - { role: debops.elasticsearch, tags: elasticsearch }
+
+
+- name: Manage memcached server
+  hosts: 'debops_memcached'
+  sudo: True
+
+  roles:
+    - { role: debops.memcached, tags: memcached }
 
 
 - name: Manage Redis server

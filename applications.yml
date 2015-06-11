@@ -130,3 +130,10 @@
 
   roles:
     - { role: jira, tags: jira }
+
+- name: Manage Confluence service
+  hosts: 'confluence'
+  sudo: True
+
+  roles:
+    - { role: confluence, tags: confluence }

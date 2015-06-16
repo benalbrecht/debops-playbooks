@@ -137,3 +137,10 @@
 
   roles:
     - { role: confluence, tags: confluence }
+
+- name: Manage bimpoto service
+  hosts: 'bimproto'
+  sudo: True
+
+  roles:
+    - { role: bimproto, tags: bimproto }

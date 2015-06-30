@@ -11,9 +11,13 @@
 - name: Manage LXC hosts
   hosts: 'debops_lxc'
   sudo: True
-
+  vars:
+    lxcpkgs:
+      Debian_jessie: [ 'debootstrap', 'python3', 'lxc', 'init-system-helpers' ]
+      Debian_squeeze: [ 'debootstrap', 'python3', 'lxc', 'init-system-helpers' ]
+      Debian_NA: [ 'debootstrap', 'python3', 'lxc', 'init-system-helpers' ]
   roles:
-    - { role: debops.lxc, tags: lxc }
+    - { role: debops.lxc, tags: lxc, lxc_distribution_packages: '{{ lxcpkgs }}' }
 
 
 - name: Manage OpenVZ Hardware Nodes

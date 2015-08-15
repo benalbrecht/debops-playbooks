@@ -2,6 +2,7 @@ debops.apt
 debops.apt_preferences
 debops.auth
 debops.backporter
+debops.bootstrap
 debops.boxbackup
 debops.console
 debops.debops
@@ -23,10 +24,16 @@ debops.golang
 debops.hwraid
 debops.ifupdown
 debops.ipxe
+debops.iscsi
 debops.java
-debops.kvm
+debops.librenms
+debops.libvirt
+debops.libvirtd
+debops.lvm
 debops.lxc
 debops.mailman
+debops.mariadb
+debops.mariadb_server
 debops.memcached
 debops.monit
 debops.monkeysphere

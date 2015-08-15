@@ -8,10 +8,39 @@ This is a Changelog related to DebOps_ playbooks and roles. You can also read
 .. _DebOps Changelog: https://github.com/debops/debops/blob/master/CHANGELOG.md
 
 
-v0.2.6
+v0.2.7
 ------
 
 *Unreleased*
+
+- Add ``debops.lvm`` role. [drybjed]
+
+- Add ``debops.iscsi`` role. [drybjed]
+
+- Add ``debops.libvirt`` and ``debops.libvirtd`` roles. ``debops.kvm`` role is
+  dropped, due to being replaced by ``debops.libvirtd``. Hosts in
+  ``[debops_kvm]`` host group will need to be moved to ``[debops_libvirtd]``,
+  there might be some variable changes as well. [drybjed]
+
+- Hosts in ``[debops_no_common]`` host group will no longer run a common
+  playbook. [drybjed]
+
+- Add a context-based tags to common playbook as an experiment (``libvirt(d)``
+  roles already use them). Context tags are inspired by ``debtags`` and will
+  allow more fine-grained control over playbook tasks, when roles start to use
+  them internally. Old-style tasks will be phased out after some time.
+  [drybjed]
+
+- Add ``debops.librenms`` role. [drybjed]
+
+- Lookup plugins ``task_src``, ``template_src`` and ``file_src`` are updated
+  using input from James Cammarata to work both in old Ansible 1.x series as
+  well as in the new 2.x series. Thanks! [drybjed]
+
+v0.2.6
+------
+
+*Released: 2015-07-14*
 
 - Add ``debops.fail2ban`` role. [drybjed]
 
@@ -74,6 +103,10 @@ v0.2.6
 - Add ``debops.snmpd`` role. [drybjed]
 
 - Add ``debops.memcached`` role. [drybjed]
+
+- Add MariaDB server and client roles. [drybjed]
+
+- Convert ``bootstrap.yml`` playbook to an Ansible role. [drybjed]
 
 v0.2.5
 ------

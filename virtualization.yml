@@ -9,7 +9,9 @@
       Debian_squeeze: [ 'debootstrap', 'python3', 'lxc', 'init-system-helpers' ]
       Debian_NA: [ 'debootstrap', 'python3', 'lxc', 'init-system-helpers' ]
   roles:
-    - { role: debops.lxc, tags: lxc, lxc_distribution_packages: '{{ lxcpkgs }}' }
+    - role: debops.lxc
+      tags: [ 'role::lxc', 'lxc' ]
+      lxc_distribution_packages: '{{ lxcpkgs }}'
 
 
 - name: Manage libvirt servers
@@ -17,8 +19,8 @@
   sudo: True
 
   roles:
-    - role: debops.libvirtd
-      tags: [ 'libvirtd', 'role::libvirtd' ]
+#    - role: debops.libvirtd
+#      tags: [ 'libvirtd', 'role::libvirtd' ]
 
 
 - name: Manage libvirt hosts
@@ -26,8 +28,8 @@
   sudo: True
 
   roles:
-    - role: debops.libvirt
-      tags: [ 'libvirt', 'role::libvirt' ]
+#    - role: debops.libvirt
+#      tags: [ 'libvirt', 'role::libvirt' ]
 
 
 - name: Manage OpenVZ Hardware Nodes
@@ -35,5 +37,6 @@
   sudo: True
 
   roles:
-#    - { role: debops.openvz, tags: openvz }
+#    - role: debops.openvz
+#      tags: [ 'role::openvz', 'openvz' ]
 

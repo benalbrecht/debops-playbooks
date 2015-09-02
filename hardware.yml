@@ -8,6 +8,17 @@
 
     - { role: debops.hwraid, tags: hwraid }
 
+
+- name: Configure GRUB
+  hosts: 'debops_grub'
+  sudo: True
+
+  roles:
+
+    - role: debops.grub
+      tags: [ 'role::grub' ]
+
+
 - name: Configure Laptop utilities
   hosts: 'laptop'
   sudo: True

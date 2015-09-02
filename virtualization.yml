@@ -1,19 +1,35 @@
 ---
 
-- name: Manage KVM hosts
-  hosts: 'debops_kvm'
-  sudo: True
-
-  roles:
-#    - { role: debops.kvm, tags: kvm }
-
-
 - name: Manage LXC hosts
   hosts: 'debops_lxc'
   sudo: True
+  vars:
+    lxcpkgs:
+      Debian_jessie: [ 'debootstrap', 'python3', 'lxc', 'init-system-helpers' ]
+      Debian_squeeze: [ 'debootstrap', 'python3', 'lxc', 'init-system-helpers' ]
+      Debian_NA: [ 'debootstrap', 'python3', 'lxc', 'init-system-helpers' ]
+  roles:
+    - role: debops.lxc
+      tags: [ 'role::lxc', 'lxc' ]
+      lxc_distribution_packages: '{{ lxcpkgs }}'
+
+
+- name: Manage libvirt servers
+  hosts: 'debops_libvirtd'
+  sudo: True
 
   roles:
-    - { role: debops.lxc, tags: lxc }
+#    - role: debops.libvirtd
+#      tags: [ 'libvirtd', 'role::libvirtd' ]
+
+
+- name: Manage libvirt hosts
+  hosts: 'debops_libvirt'
+  sudo: True
+
+  roles:
+#    - role: debops.libvirt
+#      tags: [ 'libvirt', 'role::libvirt' ]
 
 
 - name: Manage OpenVZ Hardware Nodes
@@ -21,5 +37,6 @@
   sudo: True
 
   roles:
-#    - { role: debops.openvz, tags: openvz }
+#    - role: debops.openvz
+#      tags: [ 'role::openvz', 'openvz' ]
 

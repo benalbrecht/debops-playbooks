@@ -57,6 +57,19 @@ v0.2.7
 - Add ``debops.grub`` role, created by Patryk Ściborek (scibi). Thanks!
   [drybjed]
 
+- Split ``virtualization.yml`` playbook into separate plays. [drybjed]
+
+- Add ``debops.docker`` role. [drybjed]
+
+- Add ``globmatch()`` Ansible filter plugin. Using this filter, you can match
+  strings or lists of strings against a shell glob pattern (a string or a list
+  of patterns). This can be used to easily match one or more strings in a list
+  using ``*`` and ``?`` characters. [drybjed]
+
+- Add ``debops.docker_gen`` role. [drybjed]
+
+- Add ``ldappassword`` filter. [scibi]
+
 v0.2.6
 ------
 

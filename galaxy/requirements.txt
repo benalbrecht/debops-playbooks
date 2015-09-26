@@ -10,6 +10,8 @@ debops.debops
 debops.dhcpd
 debops.directories
 debops.dnsmasq
+debops.docker
+debops.docker_gen
 debops.dokuwiki
 debops.dovecot
 debops.elasticsearch

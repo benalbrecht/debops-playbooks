@@ -1,4 +1,10 @@
 ---
 
-- include: virtualization/all.yml
+- name: Manage LXC hosts
+  hosts: 'debops_lxc'
+  sudo: True
+
+  roles:
+    - role: debops.lxc
+      tags: [ 'role::lxc', 'lxc' ]
 

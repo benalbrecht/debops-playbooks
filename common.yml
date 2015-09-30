@@ -1,6 +1,14 @@
 ---
 
-- include: core.yml
+- name: Prepare core environment
+  hosts: 'all:!localhost:!debops_no_core'
+  become: False
+
+  roles:
+
+    - role: debops.core
+      tags: [ 'role::core' ]
+      become: True
 
 - name: Common configuration for all hosts
   hosts: 'all:!localhost:!debops_no_common'
@@ -58,4 +66,3 @@
 
     - role: debops.directories
       tags: [ 'directories', 'role::directories' ]
-

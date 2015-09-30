@@ -1,14 +1,5 @@
 ---
 
-- name: Configure HWRaid support
-  hosts: 'debops_hwraid'
-  sudo: True
-
-  roles:
-
-    - { role: debops.hwraid, tags: hwraid }
-
-
 - name: Configure GRUB
   hosts: 'debops_grub'
   sudo: True

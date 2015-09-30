@@ -4,8 +4,6 @@
 
 - include: ruby.yml
 
-- include: golang.yml
-
 - include: java.yml
 
 - include: php5.yml
